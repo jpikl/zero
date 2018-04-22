@@ -5,8 +5,15 @@ import Evaluator from './Evaluator';
 import OutputRenderer from './OutputRenderer';
 import StorageWrapper from './StorageWrapper';
 
-const editorElement = document.getElementById('editor');
-const outputElement = document.getElementById('output');
+function createRootElement(id) {
+  const element = document.createElement('div');
+  element.id = id;
+  document.body.appendChild(element);
+  return element;
+}
+
+const editorElement = createRootElement('editor');
+const outputElement = createRootElement('output');
 
 const intro = fs.readFileSync(__dirname + '/intro.js', 'utf8');
 const evaluator = new Evaluator({timeout: 500});

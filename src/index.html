@@ -27,11 +27,19 @@
     .error {
       color: red;
     }
+
+    noscript {
+      display: block;
+      padding: 1em;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <div id="editor"></div>
-  <div id="output"></div>
   <script src="./index.js"></script>
+  <noscript>
+    <p>This is <strong>REPL 0</strong>, a minimalist JavaScript REPL.</p>
+    <p>Obviously, it won't work without JavaScript.</p>
+  </noscript>
 </body>
 </html>
