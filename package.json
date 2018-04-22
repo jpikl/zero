@@ -1,0 +1,29 @@
+{
+  "name": "repl-0",
+  "version": "0.1.0",
+  "description": "A minimalist JavaScript REPL",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "repl"
+  ],
+  "author": "Jan Pikl <pikl.jan@gmail.com>",
+  "homepage": "https://github.com/jpikl/repl-0",
+  "bugs": {
+    "url": "https://github.com/jpikl/repl-0/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpikl/repl-0"
+  },
+  "scripts": {
+    "dev": "parcel serve src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "brace": "^0.11.1",
+    "parcel-bundler": "^1.7.1",
+    "rimraf": "^2.6.2"
+  }
+}
