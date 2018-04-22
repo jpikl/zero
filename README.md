@@ -1,4 +1,4 @@
-# repl 0
+# REPL 0
 
 A minimalist JavaScript REPL
 
