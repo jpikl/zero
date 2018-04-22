@@ -18,12 +18,14 @@
   },
   "scripts": {
     "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html",
-    "clean": "rimraf dist"
+    "build": "parcel build --public-url . --no-source-maps src/index.html",
+    "deploy": "rm -rf ../jpikl.github.io/repl-0/ && cp -r ./dist/ ../jpikl.github.io/repl-0/",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "brace": "^0.11.1",
-    "parcel-bundler": "^1.7.1",
-    "rimraf": "^2.6.2"
+    "parcel-bundler": "^1.7.1"
   }
 }
