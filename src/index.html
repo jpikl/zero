@@ -2,7 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>REPL 0 - Minimalist JavaScript REPL</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="A minimalist JavaScript REPL.">
+  <meta name="keywords" content="REPL,JavaScript">
+  <title>REPL 0</title>
   <style>
     html, body, #editor, #output {
       height: 100%;
@@ -24,6 +27,11 @@
       overflow: auto;
     }
 
+    .no-js #editor,
+    .no-js #output {
+      display: none;
+    }
+
     .error {
       color: red;
     }
@@ -35,7 +43,12 @@
     }
   </style>
 </head>
-<body>
+<body class="no-js">
+  <script>
+    document.body.className = '';
+  </script>
+  <div id="editor"></div>
+  <div id="output"></div>
   <script src="./index.js"></script>
   <noscript>
     <p>This is <strong>REPL 0</strong>, a minimalist JavaScript REPL.</p>
