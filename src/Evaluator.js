@@ -5,7 +5,7 @@ export default class Evaluator {
   constructor({timeout}) {
     this.timeout = timeout;
     this.timers = {};
-    this.emitter = new EventEmitter;
+    this.emitter = new EventEmitter();
     this.worker = null;
     this.lastMessageId = 0;
     this.handleMessage = this.handleMessage.bind(this);
@@ -25,7 +25,7 @@ export default class Evaluator {
     const id = ++this.lastMessageId;
 
     this.timers[id] = setTimeout(this.handleTimeout, this.timeout);
-    this.worker.postMessage({id, input});
+    this.worker.postMessage({ id, input });
   }
 
   handleMessage(event) {
@@ -39,12 +39,12 @@ export default class Evaluator {
     } else {
       this.emitter.emit('success', input, output);
     }
-  };
+  }
 
   handleTimeout() {
     this.worker.terminate();
     this.worker = null;
     this.emitter.emit('error', `Evaluation exceeded ${this.timeout}ms`);
-  };
+  }
 
 }

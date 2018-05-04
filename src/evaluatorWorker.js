@@ -23,8 +23,10 @@ const __output__ = {
   },
 };
 
+/* eslint-disable no-unused-vars */
 const print = (...args) => __output__.add(...args);
 const println = (...args) => __output__.add(...args, '\n');
+/* eslint-enable no-unused-vars */
 
 const __postMessage__ = postMessage;
 
@@ -42,7 +44,7 @@ const __onmessage__ = __event__ => {
   } catch (error) {
     __postMessage__({
       id: __event__.data.id,
-      error: error.toString()
+      error: error.toString(),
     });
   } finally {
     onmessage = __onmessage__;

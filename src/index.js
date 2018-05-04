@@ -25,7 +25,7 @@ evaluator.on('success', (input, output) => {
 
 evaluator.on('error', error => {
   renderer.renderError(error);
-})
+});
 
 editor.setValue(storage.loadInput() || intro);
 editor.focus();
