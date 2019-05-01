@@ -1,7 +1,7 @@
 {
   "name": "repl-0",
   "version": "0.1.0",
-  "description": "A minimalist JavaScript REPL",
+  "description": "Minimalist JavaScript REPL",
   "license": "MIT",
   "private": true,
   "keywords": [

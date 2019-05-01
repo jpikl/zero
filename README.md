@@ -1,6 +1,7 @@
 # REPL 0
 
-A minimalist JavaScript REPL
+Minimalist JavaScript REPL.
 
-The source code is licensed under the MIT License.
-See [LICENSE.txt](LICENSE.txt) for more details.
+## License
+
+REPL 0 is licensed under the [MIT license](LICENSE.md).
