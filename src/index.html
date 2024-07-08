@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="Minimalist JavaScript REPL.">
+  <meta charset="utf-8">
+  <meta name="description" content="Minimalist JavaScript REPL">
   <meta name="keywords" content="REPL,JavaScript">
-  <title>REPL 0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zero - Minimalist JavaScript REPL</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.2/ace.min.js" integrity="sha512-yAnvECNg9QuDHCVysxX2c3yFOs9HtBfmnHpVLxGtg7DWYN9dYzEMjZm1GnBF4t60I6ny1xW1Al8owfna4QdGtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.2/theme-dracula.min.js" integrity="sha512-Uo9Lu5ebeR+BvhmnAYT4FbW+0/a85TfeWmeMkg//AzcqTrQBbTWIR0BDW+AsJw/i4kdkPcewBHUncKZng4ASEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
-    html, body, #editor, #output {
-      height: 100%;
-      min-height: 100%;
-      margin: 0;
-    }
-
-    #editor, #output {
-      box-sizing: border-box;
-      float: left;
-      width: 50%;
+    #editor {
+      position: absolute;
     }
 
     #output {
-      border-left: 1px dotted #888;
+      position: absolute;
       white-space: pre;
       font-size: 16px;
       padding: 0.5em;
       overflow: auto;
+      border: 0px dotted #888;
     }
 
-    .no-js #editor,
-    .no-js #output {
-      display: none;
+    @media (scripting: none) {
+        #editor, #output {
+          display: none;
+        }
+    }
+
+    @media (orientation: landscape) {
+      #editor {
+        inset: 0 50vw 0 0;
+      }
+
+      #output {
+        inset: 0 0 0 50vw;
+        border-left-width: 1px;
+      }
+    }
+
+    @media (orientation: portrait) {
+      #editor {
+        inset: 0 0 50vh 0;
+      }
+
+      #output {
+        inset: 50vh 0 0 0;
+        border-top-width: 1px;
+      }
     }
 
     .error {
@@ -37,22 +55,22 @@
     }
 
     noscript {
-      display: block;
-      padding: 1em;
       text-align: center;
+    }
+
+    * {
+      box-sizing: border-box;
     }
   </style>
 </head>
-<body class="no-js">
-  <script>
-    document.body.className = '';
-  </script>
+<body>
   <div id="editor"></div>
   <div id="output"></div>
-  <script src="./index.js"></script>
   <noscript>
-    <p>This is <strong>REPL 0</strong>: Minimalist JavaScript REPL.</p>
-    <p>Obviously, it won't work without JavaScript.</p>
+    <h1>Zero</h1>
+    <p>Minimalist JavaScript REPL</p>
+    <p><strong>Enable JavaScript for this page if you want to test the REPL!</strong></p>
   </noscript>
+  <script src="./index.js"></script>
 </body>
 </html>
