@@ -6,8 +6,11 @@
   <meta name="keywords" content="REPL,JavaScript">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zero - Minimalist JavaScript REPL</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.2/ace.min.js" integrity="sha512-yAnvECNg9QuDHCVysxX2c3yFOs9HtBfmnHpVLxGtg7DWYN9dYzEMjZm1GnBF4t60I6ny1xW1Al8owfna4QdGtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.2/theme-dracula.min.js" integrity="sha512-Uo9Lu5ebeR+BvhmnAYT4FbW+0/a85TfeWmeMkg//AzcqTrQBbTWIR0BDW+AsJw/i4kdkPcewBHUncKZng4ASEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="vendor/ace.js"></script>
+  <script defer src="vendor/mode-javascript.js"></script>
+  <script defer src="vendor/theme-chrome.js"></script>
+  <script defer src="vendor/theme-dracula.js"></script>
+  <script defer src="index.js"></script>
   <style>
     #editor {
       position: fixed;
@@ -71,6 +74,5 @@
     <p>Minimalist JavaScript REPL</p>
     <p><strong>Enable JavaScript for this page if you want to test the REPL!</strong></p>
   </noscript>
-  <script src="./index.js"></script>
 </body>
 </html>

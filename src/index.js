@@ -1,4 +1,3 @@
-const THEME = "dracula";
 const EDIT_TIMEOUT = 500;
 const EVAL_TIMEOUT = 500;
 
@@ -19,7 +18,7 @@ println('Hello world!');
 function main() {
   const editor = ace.edit("editor");
 
-  editor.setTheme(`ace/theme/${THEME}`);
+  editor.setTheme(`ace/theme/${getEditorTheme()}`);
   editor.setFontSize(16);
   editor.setShowPrintMargin(false);
 
@@ -44,6 +43,14 @@ function main() {
 
   editor.setValue(getHash() || DEFAULT_INPUT.trim());
   editor.focus();
+}
+
+function getEditorTheme() {
+  if (window.matchMedia == null || window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dracula";
+  } else {
+    return "chrome";
+  }
 }
 
 function createEvaluator({ onSuccess, onError }) {
