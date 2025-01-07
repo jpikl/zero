@@ -10,11 +10,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.2/theme-dracula.min.js" integrity="sha512-Uo9Lu5ebeR+BvhmnAYT4FbW+0/a85TfeWmeMkg//AzcqTrQBbTWIR0BDW+AsJw/i4kdkPcewBHUncKZng4ASEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     #editor {
-      position: absolute;
+      position: fixed;
     }
 
     #output {
-      position: absolute;
+      position: fixed;
       white-space: pre;
       font-size: 16px;
       padding: 0.5em;
@@ -30,22 +30,22 @@
 
     @media (orientation: landscape) {
       #editor {
-        inset: 0 50vw 0 0;
+        inset: 0 50% 0 0;
       }
 
       #output {
-        inset: 0 0 0 50vw;
+        inset: 0 0 0 50%;
         border-left-width: 1px;
       }
     }
 
     @media (orientation: portrait) {
       #editor {
-        inset: 0 0 50vh 0;
+        inset: 0 0 50% 0;
       }
 
       #output {
-        inset: 50vh 0 0 0;
+        inset: 50% 0 0 0;
         border-top-width: 1px;
       }
     }
